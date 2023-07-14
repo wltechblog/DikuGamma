@@ -2,7 +2,9 @@
 *  file: db.h , Database module.                          Part of DIKUMUD *
 *  Usage: Loading/Saving chars booting world.                             *
 ************************************************************************* */
-
+#ifndef HAS_db_h
+#define HAS_db_h 1
+#include "structs.h"
 
 /* data files used by the game system */
 
@@ -147,7 +149,7 @@ struct reset_q_type
 {
 	struct reset_q_element *head;
 	struct reset_q_element *tail;
-} reset_q;
+};
 
 
 
@@ -163,3 +165,5 @@ struct help_index_element
 	char *keyword;
 	long pos;
 };
+
+#endif

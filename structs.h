@@ -2,6 +2,8 @@
 *  file: structs.h , Structures        .                  Part of DIKUMUD *
 *  Usage: Declarations of central data structures                         *
 ************************************************************************* */
+#ifndef HAS_structs_h
+#define HAS_structs_h 1
 
 #include <sys/types.h>
 
@@ -773,3 +775,5 @@ struct con_app_type
 	sh_int hitp;
 	sh_int shock;
 };
+
+#endif

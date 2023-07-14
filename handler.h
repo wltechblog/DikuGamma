@@ -2,7 +2,9 @@
 *  file: handler.h , Handler module.                      Part of DIKUMUD *
 *  Usage: Various routines for moving about objects/players               *
 ************************************************************************* */
-
+#ifndef HAS_handler_h
+#define HAS_handler_h 1
+#include "structs.h"
 /* handling the affected-structures */
 void affect_total(struct char_data *ch);
 void affect_modify(struct char_data *ch, byte loc, byte mod, long bitv, bool add);
@@ -57,6 +59,7 @@ struct obj_data *get_obj_in_list_vis(struct char_data *ch, char *name,
 struct obj_data *get_obj_vis(struct char_data *ch, char *name);
 
 void extract_char(struct char_data *ch);
+void stop_fighting(struct char_data *ch);
 
 
 /* Generic Find */
@@ -71,3 +74,4 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 #define FIND_OBJ_WORLD    16
 #define FIND_OBJ_EQUIP    32
 
+#endif

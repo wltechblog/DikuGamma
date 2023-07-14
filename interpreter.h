@@ -2,6 +2,8 @@
 *  file: Interpreter.h , Command interpreter module.      Part of DIKUMUD *
 *  Usage: Procedures interpreting user command                            *
 ************************************************************************* */
+#ifndef HAS_interpreter_h
+#define HAS_interpreter_h 1
 
 void command_interpreter(struct char_data *ch, char *argument);
 int search_block(char *arg, char **list, bool exact);
@@ -21,3 +23,4 @@ struct command_info
 	byte minimum_position;
 	byte minimum_level;
 };
+#endif
