@@ -527,7 +527,7 @@ void show_string(struct descriptor_data *d, char *input) {
 }
 
 void night_watchman(void) {
-  long tc;
+  time_t tc;
   struct tm *t_info;
 
   extern int shutdown;
@@ -549,7 +549,7 @@ void night_watchman(void) {
 }
 
 void check_reboot(void) {
-  long tc;
+  time_t tc;
   struct tm *t_info;
   char dummy;
   FILE *boot;
@@ -594,7 +594,7 @@ void check_reboot(void) {
 #ifdef GR
 
 int workhours() {
-  long tc;
+  time_t tc;
   struct tm *t_info;
 
   tc = time(0);
